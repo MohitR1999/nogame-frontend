@@ -11,7 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
-const URL = 'http://localhost:4000';
+const URL = `${process.env.SERVER_URL}:${process.env.SERVER_PORT}`;
 const socket = io(URL);
 
 const darkTheme = createTheme({
@@ -19,24 +19,6 @@ const darkTheme = createTheme({
     mode: 'dark'
   }
 });
-
-/*
-function App() {
-
-  return (
-    <div>
-      <input onChange={handleInputChange}/>
-      <button onClick={submitMessage}>Send</button>
-      <Button variant='contained'>Press</Button>
-      {
-        messageList.map(msg => {
-          return <h1>{msg}</h1>;
-        })
-      }
-    </div>
-  );
-}
-*/
 
 const items = ["Hello", "World"];
 
